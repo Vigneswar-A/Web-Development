@@ -1,0 +1,747 @@
+.title {
+    position: absolute;
+    top: -75px;
+}
+
+button {
+    background-color: aqua;
+}
+
+hr {
+    border: 3px solid black;
+    border-radius: 30%;
+}
+
+sup,
+sub {
+    color: blue;
+}
+
+h2 {
+    color: black;
+}
+
+/* This css is cascaded by the following one (overriden)*/
+h1 {
+    color: blue;
+}
+
+h1 {
+    color: red;
+}
+
+div {
+    background: rgba(19, 201, 198, 0.633)
+}
+
+/* Universal Selector 
+{
+    background-color: gray;
+}
+*/
+
+/* Element Selector */
+img {
+    height: 200px;
+    width: 200px;
+}
+
+/* Selector List */
+h1,
+h2 {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* ID Selector */
+#lists {
+    background-color: brown;
+}
+
+/* Class Selector*/
+.form-label {
+    background-color: blueviolet;
+}
+
+/* Descendant Selector (no need to be direct child) */
+form label {
+    background-color: green;
+}
+
+/* Adjacent Selector */
+#form label+input {
+    background-color: limegreen;
+}
+
+/* Direct Child Selector */
+#directchild p>label {
+    color: firebrick;
+}
+
+/* Attribute Selector */
+form input[type="radio"] {
+    color: gold;
+}
+
+/* Form with action that has word google in it */
+form[action*="google"] {
+    color: coral;
+}
+
+/* Form with id ending with suffix child */
+div[id$="child"] {
+    background-color: darkslategrey;
+}
+
+/* https: //developer.mozilla.org/en-US/docs/Web/CSS/Attribute_selectors */
+
+/* Pseudo Classes */
+button:hover {
+    background-color: darkorange;
+}
+
+button:active {
+    color: red;
+}
+
+/* Change every 2nd para's color to blue */
+#pseudo>p:nth-of-type(2n) {
+    color: blue;
+}
+
+/*Psuedo Elements*/
+#pseudoelement p::first-letter {
+    font-size: 36px;
+    color: aquamarine;
+}
+
+/*Specificity (ID, CLASS, ELEMENT) */
+#specific {
+    color: gold;
+}
+
+#specific p {
+    color: blue;
+}
+
+#specific p:nth-of-type(1) {
+    color: green;
+}
+
+.one {
+    color: mediumpurple;
+}
+
+#specific #two {
+    color: tan;
+}
+
+/* Inline and important */
+#inline p {
+    color: fuchsia !important;
+}
+
+#inline p {
+    color: indigo;
+}
+
+/* Inheritance */
+#inheritance {
+    color: brown;
+}
+
+/* inherit property makes the element inherit properties from parent */
+#inheritance button {
+    color: inherit
+}
+
+/*Box Model - each element has a border, padding, margin*/
+#boxmodel {
+    width: 500px;
+    height: 200px;
+    background-color: rgb(14, 65, 27);
+    border: 10px dashed black;
+    /*Border shorthand*/
+    box-sizing: border-box;
+    border-radius: 30%;
+    padding: 20px;
+    /*includes border into size*/
+}
+
+#boxmodel h1 {
+    background-color: azure;
+    margin: 50px;
+}
+
+#display {
+    height: 1000px;
+    width: 600px;
+    color: black;
+    font-size: 24;
+}
+
+#box1 {
+    height: 100px;
+    width: 100px;
+    background-color: red;
+    margin: 10;
+    display: inline;
+}
+
+#box2 {
+    height: 100px;
+    width: 100px;
+    background-color: green;
+    margin: 10;
+    display: block;
+}
+
+#box3 {
+    height: 100px;
+    width: 100px;
+    background-color: yellow;
+    margin: 10;
+    display: inline-block;
+}
+
+/* Units 
+em - Font size of the parent,
+in the case of typographical properties like font-size,
+and font size of the element itself,
+in the case of other properties like width.
+
+rem - Font size of the root element.
+
+% - percent of something depending on situation
+*/
+
+#Units {
+    height: 500px;
+    width: 500px;
+    font-size: 16px;
+}
+
+#Units #one {
+    font-size: 1em;
+}
+
+#Units #two {
+    font-size: 2em;
+}
+
+#Units #three {
+    font-size: 3em;
+}
+
+#Units #four {
+    font-size: 4em;
+}
+
+#Units #five {
+    font-size: 5em;
+}
+
+body {
+    background: rgba(16, 84, 222, 0.699);
+    color: white;
+    text-align: left;
+    font-weight: bold;
+    font-size: 24px;
+    line-height: 30px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+/* background-color changes only color wherease background does a lot more, like we can set an image*/
+
+#div {
+    color: orange;
+    text-decoration: underline;
+}
+
+/*Transparancy*/
+#alpha {
+    background-color: rgba(255, 0, 153, 0.395);
+    height: 10em;
+    width: 10em;
+}
+
+#opacity {
+    background-color: rgba(255, 0, 153);
+    height: 10em;
+    width: 10em;
+    opacity: 0.4;
+}
+
+/*Positions*/
+#position {
+    position: relative;
+    display: block;
+    height: 500px;
+}
+
+#position div {
+    height: 100px;
+    width: 100px;
+    background-color: bisque;
+    margin: 10px;
+    display: inline-block;
+}
+
+#position #static {
+    position: static;
+    left: 0px;
+    top: 50px;
+}
+
+#position #relative {
+    position: relative;
+    left: 400px;
+}
+
+#position #absolute {
+    position: absolute;
+    left: 700px;
+    background-color: rgba(255, 171, 45, 0.808);
+}
+
+#position #fixed {
+    position: fixed;
+    right: 100px;
+    top: 50px;
+    background-color: rgba(255, 171, 45, 0.808);
+}
+
+#position #sticky {
+    position: sticky;
+    left: 0px;
+    top: 0px;
+    background-color: rgba(20, 17, 215, 0.808);
+}
+
+/*Transitions*/
+
+
+#transition p {
+    height: 200px;
+    width: 200px;
+    background-color: brown;
+    position: relative;
+    left: 0px;
+    transition: 5s ease-in;
+}
+
+#transition p:hover {
+    transition: 5s ease-out;
+    background-color: aqua;
+    left: 500px;
+}
+
+/*Transforms*/
+#transform {
+    height: 500px;
+    width: 500px;
+    display: flex;
+    align-items: center;
+}
+
+#transform h3 {
+    background-color: cadetblue;
+    border: 2px solid black;
+    margin: 20px;
+}
+
+#transform h3:nth-of-type(1) {
+    transform: rotate(45deg);
+}
+
+#transform h3:nth-of-type(2) {
+    transform: scale(0.5);
+}
+
+#transform h3:nth-of-type(3) {
+    transform: translate(20px, 30px);
+}
+
+#transform h3:nth-of-type(4) {
+    transform: skew(30deg);
+}
+
+/*Background*/
+#background {
+    height: 300px;
+    width: 300px;
+    background-image: url("https://images.unsplash.com/photo-1695753723777-505c5408b6b3?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1887&q=80");
+    background-size: cover;
+}
+
+/*Flex Box*/
+#flexbox>div>div {
+    position: relative;
+    margin: 75px;
+}
+
+#flexbox>div {
+    flex-wrap: wrap;
+}
+
+.flex div {
+    height: 50px;
+    width: 50px;
+    margin: 2px;
+}
+
+.flex>div>div:nth-of-type(1n) {
+    background-color: aquamarine;
+}
+
+.flex>div>div:nth-of-type(2n) {
+    background-color: rgb(255, 16, 16);
+}
+
+.flex>div>div:nth-of-type(3n) {
+    background-color: rgb(255, 210, 127);
+}
+
+.flex>div>div:nth-of-type(4n) {
+    background-color: rgb(159, 255, 127);
+}
+
+.flex>div>div:nth-of-type(5n) {
+    background-color: rgb(23, 109, 223);
+}
+
+.flex>div>div:nth-of-type(6n) {
+    background-color: rgb(132, 98, 255);
+}
+
+#flexbox>div>div {
+    display: flex;
+    flex-direction: row;
+    height: 500px;
+    width: 500px;
+    border: 5px dashed black;
+}
+
+#flexdir {
+    display: flex;
+    flex-direction: row;
+}
+
+#flexdir #row {
+    display: flex;
+    flex-direction: row;
+}
+
+#flexdir #row-reverse {
+    display: flex;
+    flex-direction: row-reverse;
+}
+
+#flexdir #column {
+    display: flex;
+    flex-direction: column;
+}
+
+#flexdir #column-reverse {
+    display: flex;
+    flex-direction: column-reverse;
+}
+
+
+#flexjust {
+    display: flex;
+    flex-direction: row;
+    left: 0;
+    padding: 75px;
+}
+
+#flexjust #flex-start {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+}
+
+#flexjust #flex-end {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+}
+
+#flexjust #spaced-even {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
+#flexwrap {
+    display: flex;
+    flex-direction: row;
+    left: 0;
+    padding: 75px;
+}
+
+#flexwrap #wrap {
+    height: 300px;
+    width: 300px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+#flexwrap #wrap-reverse {
+    height: 300px;
+    width: 300px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap-reverse;
+}
+
+#align-items {
+    display: flex;
+    flex-direction: row;
+    left: 0;
+    padding: 75px;
+}
+
+#align-items #center {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+#align-items #baseline {
+    display: flex;
+    flex-direction: row;
+    align-items: baseline;
+}
+
+#align-items #col-center {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#align-items #col-baseline {
+    display: flex;
+    flex-direction: column;
+    align-items: baseline;
+}
+
+#align-items #baseline div:nth-of-type(3) {
+    font-size: 100px;
+}
+
+#align-content {
+    display: flex;
+    flex-direction: row;
+    left: 0;
+    padding: 75px;
+}
+
+#align-content>div>div {
+    margin: 5px;
+}
+
+#align-content #center {
+    height: 300px;
+    width: 300px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-content: center;
+}
+
+#align-content #flex-start {
+    height: 300px;
+    width: 300px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-content: flex-start;
+}
+
+#align-content #flex-end {
+    height: 300px;
+    width: 300px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-content: flex-end;
+}
+
+#align-content #spaced-evenly {
+    height: 300px;
+    width: 300px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-content: space-evenly;
+}
+
+#align-content #align-self {
+    height: 500px;
+    width: 500px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+#align-content #align-self>div:nth-of-type(2n) {
+    align-self: flex-end;
+}
+
+#flex-basis {
+    display: flex;
+    flex-direction: row;
+    left: 0;
+    padding: 75px;
+}
+
+#flex-basis #basis100row div {
+    display: flex;
+    flex-direction: row;
+    flex-basis: 200px;
+}
+
+#flex-basis #basis100col div {
+    display: flex;
+    flex-direction: row;
+    flex-basis: 200px;
+}
+
+#flex-basis #basis100col {
+    display: flex;
+    flex-direction: column;
+    flex-basis: 200px;
+}
+
+#flex-grow-shrink {
+    display: flex;
+    flex-direction: row;
+    left: 0;
+}
+
+#flex-grow-shrink #grow div:nth-of-type(1) {
+    display: flex;
+    flex-grow: 1;
+}
+
+#flex-grow-shrink #grow div:nth-of-type(2) {
+    display: flex;
+    flex-grow: 2;
+}
+
+#flex-grow-shrink #grow div:nth-of-type(3) {
+    display: flex;
+    flex-grow: 3;
+}
+
+#flex-grow-shrink #grow div:nth-of-type(4) {
+    display: flex;
+    flex-grow: 4;
+}
+
+
+#flex-grow-shrink #shrink div {
+    display: flex;
+    flex-basis: 500px;
+}
+
+#flex-grow-shrink #shrink div:nth-of-type(1) {
+    display: flex;
+    flex-shrink: 3;
+}
+
+#flex-grow-shrink #shrink div:nth-of-type(2) {
+    display: flex;
+    flex-shrink: 4;
+}
+
+#flex-grow-shrink #shrink div:nth-of-type(3) {
+    display: flex;
+    flex-shrink: 5;
+}
+
+#flex-grow-shrink #shrink div:nth-of-type(4) {
+    display: flex;
+    flex-shrink: 6;
+}
+
+@media (min-width: 300px) {
+    #media p {
+        background-color: black;
+    }
+}
+
+@media (min-width: 500px) {
+    #media p {
+        background-color: yellow;
+    }
+}
+
+@media (min-width: 600px) {
+    #media p {
+        background-color: blue;
+    }
+}
+
+@media (min-width: 800px) {
+    #media p {
+        background-color: green;
+    }
+}
+
+@media (min-width: 1000px) {
+    #media p {
+        background-color: red;
+    }
+}
+
+@media (min-width: 1200px) {
+    #media p {
+        background-color: rgb(121, 0, 161);
+    }
+}
+
+/*For JS*/
+.bigtext {
+    font-size: 40px;
+}
+
+.grey {
+    color: gray;
+}
+
+* {
+    align-items: center;
+    justify-content: center;
+}
+
+#events {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    flex-direction: column;
+}
+
+#chaos {
+    width: 400px;
+    height: 100px;
+    font-size: large;
+    border: 5px solid darkred;
+    background: red;
+    position: relative;
+    align-self: center;
+}
+
+#events .box {
+    width: 100px;
+    height: 100px;
+    margin: 50px;
+    background-color: blanchedalmond;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: black;
+    border: 2px solid brown;
+}
