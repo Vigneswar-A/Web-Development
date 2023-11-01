@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Random</title>
+</head>
+<style>
+    p {
+        line-height: 10px;
+    }
+</style>
+
+<body>
+    <%for(let [name, reg, section, mobile] of students){ %>
+        <p>Name: <%=name%>
+        </p>
+        <p>Reg: <%=reg%>
+        </p>
+        <p> Section: <%=section%>
+        </p>
+        <p>Mobile:</p>
+        <%=mobile%>
+            <% } %>
+</body>
+
+</html>
