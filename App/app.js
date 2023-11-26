@@ -27,6 +27,9 @@ app.get('/search', (req, res) => {
     res.send(`Cannot find ${req.query.f}`)
 })
 
+app.post('/echo', (req, res) => {
+    res.send("HEY DONT POST!");
+})
 
 
 app.get('*', (req, res) => {
