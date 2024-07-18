@@ -1,0 +1,68 @@
+<style>
+    body {
+        margin: 0;
+    }
+
+    nav {
+        background-color: rgb(121, 119, 119);
+        display: flex;
+        width: 100%;
+        justify-content: center;
+        flex-basis: 100px;
+    }
+
+    .navitem {
+        flex-grow: 1;
+        display: flex;
+        justify-content: center;
+        font-size: 1.5rem;
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        text-decoration: none;
+        color: rgb(133, 133, 133);
+        align-items: center;
+        background-color: rgb(83, 83, 83);
+        padding: 20px 50px;
+    }
+
+    #navhead {
+        flex-grow: 1;
+        display: flex;
+        justify-content: center;
+        font-size: 3rem;
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        text-decoration: none;
+        background-color: rgb(83, 83, 83);
+        align-items: center;
+        padding: 20px 50px;
+        transition: color 1s;
+    }
+
+    .navitem:hover {
+        background-color: rgb(58, 58, 58);
+        color: black;
+    }
+</style>
+<nav>
+    <a href="/" id="navhead">CodeCryptEx</a>
+    <a href="/writeups" class="navitem">Writeups</a>
+    <a href="/competitive_programming" class="navitem">Competitive Programming</a>
+    <a href="/study_resources" class="navitem">Study Resources</a>
+    <a href="/about" class="navitem">About</a>
+</nav>
+<script>
+    const color1 = "rgb(0, 0, 0)";
+    const color2 = "rgb(152, 152, 152)";
+    const head = document.getElementById("navhead");
+    let current = color1;
+
+    function switchColor() {
+        if (head.style.color === color1) {
+            head.style.color = color2;
+        } else {
+            head.style.color = color1;
+        }
+        setTimeout(switchColor, 1000);
+    }
+
+    switchColor();
+</script>

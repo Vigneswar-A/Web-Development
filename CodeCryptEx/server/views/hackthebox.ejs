@@ -1,0 +1,42 @@
+<html>
+
+<head>
+    <title>HacktheBox Writeups</title>
+    <link href="/writeups/hackthebox/static/hackthebox.css" rel="stylesheet">
+</head>
+
+<body>
+    <%- include('partials/navbar.ejs') %>
+        <h1>HacktheBox Writeups</h1>
+        <div id="search">
+            <label>🔍</label>
+            <input id="searchinput" type="text">
+        </div>
+        <div id="boxes">
+            <% for(let box of boxes) { %>
+                <a href="/writeups/hackthebox/<%= box %>">
+                    <%= box %>
+                </a>
+                <% } %>
+        </div>
+</body>
+<script>
+    var boxes = "<%= boxes %>".split(',');
+    let boxDiv = document.getElementById("boxes");
+    const search = document.getElementById("searchinput");
+    search.addEventListener('keyup', () => {
+        boxDiv.innerHTML = '';
+        let searchString = search.value;
+        for (let box of boxes) {
+            if (box.toLocaleLowerCase().startsWith(searchString.toLocaleLowerCase())) {
+                console.log(box);
+                let boxLink = document.createElement('a');
+                boxLink.href = "/writeups/hackthebox/" + box;
+                boxLink.textContent = box;
+                boxDiv.appendChild(boxLink);
+            }
+        }
+    });
+</script>
+
+</html>

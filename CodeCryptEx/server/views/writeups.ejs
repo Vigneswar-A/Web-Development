@@ -1,0 +1,20 @@
+<html>
+
+<head>
+    <title>HacktheBox Writeups</title>
+    <link href="/writeups/hackthebox/static/writeups.css" rel="stylesheet">
+</head>
+
+<body>
+    <%- include('partials/navbar.ejs') %>
+        <h1>Writeups</h1>
+        <div id="boxes">
+            <% for(let writeup of writeups) {%>
+                <a href="/writeups/<%= writeup %>">
+                    <%= writeup.toUpperCase() %> Writeups
+                </a>
+                <% } %>
+        </div>
+</body>
+
+</html>

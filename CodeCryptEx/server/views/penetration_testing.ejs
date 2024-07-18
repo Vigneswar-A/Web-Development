@@ -1,0 +1,20 @@
+<html>
+
+<head>
+    <title>Penetration Testing Resources</title>
+    <link href="/study_resources/penetration_testing/static/penetration_testing.css" rel="stylesheet">
+</head>
+
+<body>
+    <%- include('partials/navbar.ejs') %>
+        <h1>Penetration Testing Resources</h1>
+        <div id="topics">
+            <% for(let topic of topics) {%>
+                <a href="/study_resources/penetration_testing/<%= topic %>">
+                    <%= topic %>
+                </a>
+                <% } %>
+        </div>
+</body>
+
+</html>

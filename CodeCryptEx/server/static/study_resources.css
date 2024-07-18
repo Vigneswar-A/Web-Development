@@ -1,0 +1,31 @@
+body {
+    background-color: gray;
+    margin: 0;
+}
+
+h1 {
+    text-align: center;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 4rem;
+}
+
+#topics a {
+    display: flex;
+    justify-content: center;
+    min-height: 4rem;
+    font-size: 2rem;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    text-decoration: none;
+    color: rgb(40, 39, 39);
+    border: black solid 2px;
+    margin: 25px;
+    align-items: center;
+    background-color: rgb(92, 92, 92);
+    text-transform: capitalize;
+}
+
+#topics a:hover {
+    background-color: rgb(50, 47, 47);
+    color: black;
+    text-transform: capitalize;
+}

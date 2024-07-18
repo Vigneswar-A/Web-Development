@@ -1,0 +1,20 @@
+<html>
+
+<head>
+    <title>Study Resources</title>
+    <link href="/study_resources/penetration_testing/static/study_resources.css" rel="stylesheet">
+</head>
+
+<body>
+    <%- include('partials/navbar.ejs') %>
+        <h1>Study Resources</h1>
+        <div id="topics">
+            <% for(let topic of topics) {%>
+                <a href="/study_resources/<%= topic %>">
+                    <%= topic.replace('_', ' ' ).toLowerCase() %>
+                </a>
+                <% } %>
+        </div>
+</body>
+
+</html>
