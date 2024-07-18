@@ -3,6 +3,7 @@ from flask import Flask, request, render_template
 import re
 from secrets import token_hex
 from collections import defaultdict
+from pickle import loads
 
 app = Flask(__name__)
 app.config['TEMPLATES_AUTO_RELOAD'] = True
@@ -76,7 +77,6 @@ def store_api():
         token = request.form.get('token')
     else:
         token = generate_random_token()
-    from pickle import loads
     student = loads(urlsafe_b64decode(request.form.get('student')))
     students[token].append(student)
     return render_template('score.html', students=students[token], token=token)

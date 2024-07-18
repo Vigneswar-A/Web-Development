@@ -1,0 +1,23 @@
+<div id="search">
+    <label>🔍</label>
+    <input id="searchinput" type="text">
+</div>
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+        var writeups = "<%= writeups %>".split(',');
+        let writeupDiv = document.getElementById("writeups");
+        const search = document.getElementById("searchinput");
+        search.addEventListener('keyup', () => {
+            writeupDiv.innerHTML = '';
+            let searchString = search.value;
+            for (let writeup of writeups) {
+                if (writeup.toLocaleLowerCase().startsWith(searchString.toLocaleLowerCase())) {
+                    let writeupLink = document.createElement('a');
+                    writeupLink.href = "<%= dir %>" + writeup;
+                    writeupLink.textContent = writeup;
+                    writeupDiv.appendChild(writeupLink);
+                }
+            }
+        });
+    })
+</script>

@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Mr C0d3r H4ck3r</title>
+    <link href="css/index.css" rel="stylesheet">
+</head>
+
+<body>
+    <%- include('partials/navbar.ejs') %>
+        <%- include('partials/search.ejs') %>
+            <br>
+            <div id="writeups">
+                <% for(let writeup of writeups) { %>
+                    <a href="<%= dir %>/<%= writeup %>">
+                        <%= writeup %>
+                    </a>
+                    <% } %>
+            </div>
+</body>
+
+</html>

@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>SASTRA</title>
+    <style>
+        * {
+            margin: 0;
+            line-height: 1.6;
+            padding: 0;
+        }
+
+        html,
+        body {
+            height: 100%;
+            width: 100%;
+        }
+
+        body {
+            display: flex;
+            flex-direction: column;
+        }
+
+        body>div {
+            display: flex;
+            flex-direction: row;
+            flex-basis: 100%;
+        }
+
+        body>div>div {
+            border: 2px solid black;
+            width: 50%;
+            display: flex;
+            flex-direction: column;
+            padding: 20px;
+            border-radius: 5%;
+            margin: 0.2rem;
+            opacity: 70%;
+        }
+
+        body>div>div:hover {
+            opacity: 100%;
+            border: 2px solid rgb(88, 46, 255);
+        }
+
+        h1 {
+            text-align: center;
+        }
+
+        #programmes {
+            display: flex;
+            flex-direction: column;
+        }
+
+        #programmes li {
+            margin-left: 4rem;
+        }
+
+        a {
+            text-decoration: none;
+            color: black;
+        }
+
+        a:hover {
+            font-weight: bold;
+        }
+
+        #about {
+            background-color: rgb(234, 251, 255);
+        }
+
+        #schools {
+            background-color: rgb(187, 243, 255);
+        }
+
+        #login form {
+            display: flex;
+            align-items: center;
+            justify-content: space-evenly;
+            flex-direction: column;
+            height: 100%;
+        }
+
+        #login form label {
+            display: inline-block;
+            width: 5rem;
+        }
+
+        #login form button {
+            display: inline-block;
+            width: 5rem;
+            margin: 10px;
+        }
+
+        #login {
+            background-color: rgb(187, 243, 255)
+        }
+
+        #news ul {
+            background-color: rgb(234, 251, 255);
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+            padding: 20px;
+        }
+
+        #news ul li {
+            padding: 10px;
+        }
+
+        #news ul li:hover {
+            font-weight: bold;
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        <div id="about">
+            <h1>About SASTRA</h1>
+            <h2>Introduction</h2>
+            <p> The Shanmugha Arts, Science, Technology & Research Academy, also known as SASTRA, is a private and
+                deemed university in the town of Thirumalaisamudram, Thanjavur district, Tamil Nadu, India. SASTRA is
+                ranked by global ranking agencies such as Times Higher Education and QS. It offers undergraduate, post
+                graduate and doctoral [1] courses in Engineering, Science, Education, Management, Law and the Arts.[2]
+            </p>
+            <h2>History</h2>
+            <p> SASTRA Deemed University started in 1984 in the form of Shanmugha College of Engineering, affiliated to
+                the Bharathidasan University, Trichy. In 2001 it was renamed as Shanmugha Arts, Science, Technology &
+                Research Academy. It was the first institution to get the 'Deemed University status' in Tamil Nadu.
+                Srinivasa Ramanujam Center at Kumbakonam is attached to it.[citation needed] In 2011, software company
+                Tata Consultancy Services set a world record of recruiting 1,755 students from SASTRA, the largest
+                recruitment by any company in the world from a single campus.[3] </p>
+        </div>
+        <div id="schools">
+            <h1> Schools</h1>
+            <div id="programmes">
+                <p>
+                <h3>B.Tech</h3>
+                <ul>
+                    <li><a href="https://www.sastra.edu/prog/SoME/BAS/">B.Tech. Aerospace Engineering</a></li>
+                    <li><a href="https://www.sastra.edu/prog/SCBT/BBE/">B.Tech. Bioengineering</a></li>
+                    <li><a href="https://www.sastra.edu/prog/SoC/BCS/">B.Tech. Computer Science & Engineering</a></li>
+                    <li><a href="https://www.sastra.edu/prog/SEEE/BEE/">B.Tech. Electrical and Electronics
+                            Engineering</a></li>
+                </ul>
+                <hr style="border: 1px solid black">
+                <h3>Law</h3>
+                <ul>
+                    <li><a href="https://www.sastra.edu/prog/SoL/BBAL/">BA LLB</a></li>
+                    <li><a href="https://www.sastra.edu/prog/SoL/BBUL/">B BA LLB</a></li>
+                    <li><a href="https://www.sastra.edu/prog/SoL/BCOL/">B.Com LLB</a></li>
+                </ul>
+                </p>
+            </div>
+        </div>
+    </div>
+    <div>
+        <div id="login">
+            <h1>Login</h1>
+            <form>
+                <p>
+                    <label>Name: </label>
+                    <input type="text" required>
+                </p>
+                <p>
+                    <label>Password: </label>
+                    <input type="password" required>
+                </p>
+                <button>Submit</button>
+            </form>
+        </div>
+        <div id="news">
+            <h1>News and Events</h1>
+            <ul>
+                <li>SASTRA DISTINGUISHED ALUMNI AWARD NOMINATION</li>
+                <li>NCC Boys Recruitment for the academic 2024</li>
+                <li>Indian Philosopher's Day | 25 July, 2024</li>
+                <li>Forums of SASTRA Extension Activities</li>
+            </ul>
+        </div>
+    </div>
+</body>
+
+</html>
